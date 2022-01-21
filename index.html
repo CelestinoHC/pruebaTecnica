@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header class="container">
+        <div class="row">
+            <div class="col-4 d-flex align-items-center">
+                <a href="#" class="">
+                    <img class="img-fluid" src="Assets/clients/clients-logo3.png" alt="">
+                </a>
+            </div>
+            <div class="col-8">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        FEATURES
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">PRICING</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">CONTACT</a>
+                                </li>
+                                <li class="nav-item login">
+                                    <a class="nav-link" href="#">LOGIN</a>
+                                </li>
+                                <li class="nav-item get-started">
+                                    <a class="nav-link" href="#">GET STARTED</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <h2><strong>Build applications <span>faster</span></strong></h2>
+                <p>
+                    Hire experts & get your job done. The right IT security solutions. Protect your clients
+                    and computer systems from hackers and fight against malvare.
+                </p>
+
+                <p class="discount" href="#">For as low a <strong>$0.95</strong> per user account</p>
+
+                <div class="row link-wn-sn" style="margin-top: 60px;">
+                    <div class="col-6 text-center">
+                        <a href="#" style="background-color: #65c8db; padding: 15px;">
+                            WATCH DEMO
+                            <img class="img-fluid" src="Assets/btn-play.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 text-center">
+                        <a href="#" style="background-color: #a869d1; padding: 15px">START NOW</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4 mt-4">
+                <div class="card-credit-sim row mx-auto mx-lg-0">
+                    <div class="col-12 text-center">
+                        <h5>SIMULADOR DE CREDITO</h5>
+                        <P>_________</P>
+                    </div>
+                    <div class="col-12 range-wrap">
+                        <div class="range-value" id="rangeVmontoDeseado"></div>
+                        <label for="MontoDeseado" style="margin-left: 60%;" class="form-label align-self-end">Monto
+                            deseado</label>
+                        <input type="range" data-popup-enabled="true" class="form-range" value="10000" min="10000"
+                            max="100000" id="montoDeseado">
+                    </div>
+                    <div class="col-12 range-wrap">
+                        <div class="range-value" id="rangeVtasaAnual"></div>
+                        <label for="TasaAnual" style="margin-left: 75%;" class="form-label align-self-end">Tasa
+                            anual</label>
+                        <input type="range" data-popup-enabled="true" step="0.1" class="form-range" value="8.9"
+                            min="8.9" max="15" id="tasaAnual">
+                    </div>
+                    <hr>
+                    <div class="col-12 mb-3 text-center">
+                        <h5>Plazo en meses</h5>
+                        <div class="row">
+                            <div class="col-4 text-center">
+                                <button id="btn12Months">12</button>
+                            </div>
+                            <div class="col-4 text-center">
+                                <button id="btn24Months">24</button>
+                            </div>
+                            <div class="col-4 text-center">
+                                <button id="btn36Months">36</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-12 data-credit">
+                        <div class="row g-2 align-items-center">
+                            <div class="col text-end">
+                                <label for="PagoMensual" class="col-form-label lead">Pago Mensual</label>
+                            </div>
+                            <div class="col">
+                                <input readonly type="text" id="pagoMensual" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row g-2 align-items-center">
+                            <div class="col text-end">
+                                <label for="ComisionApertura" class="col-form-label lead">Comision de apertura</label>
+                            </div>
+                            <div class="col">
+                                <input readonly type="text" id="comisionApertura" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row g-2 align-items-center">
+                            <div class="col text-end">
+                                <label for="MontoNetoDepositado" class="col-form-label lead">Monto neto Depositado</label>
+                            </div>
+                            <div class="col">
+                                <input readonly type="text" id="montoNetoDepositado" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row g-2 align-items-center">
+                            <div class="col text-end">
+                                <label for="PagoMensual" class="col-form-label lead">Total pagado</label>
+                            </div>
+                            <div class="col">
+                                <input readonly type="text" id="totalPagado" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row g-2 my-2 align-items-center">
+                            <div class="col text-end">
+                                <label for="CAT" class="col-form-label lead">CAT</label>
+                            </div>
+                            <div class="col">
+                                <input readonly type="text" id="cat" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row g-2 mt-3">
+                            <div class="col text-center">
+                                <a class="sol-cred" href="#">SOLICITAR MI CREDITO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 text-center" id="FdFy">
+                <h3>Features designed for you</h3>
+                <p>_________</p>
+                <p>
+                    We belive we have created the most efficent SaaS landing page for you users. Landing page
+                    with features that will convince you to use it for your SaaS business.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-6 col-lg-4">
+                <img src="Assets/icons/icons-64-violet/responsive-64.png" alt="">
+                <h4>Responsive <strong>Layout Template</strong></h4>
+                <p>_________</p>
+                <p>
+                    Responsive code that makes your landing page look good
+                    on all devices (desktops, tablets, and phones). Created
+                    with mobile specialists
+                </p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <img src="Assets/icons/icons-64-violet/desktop-chart-64.png" alt="">
+                <h4><strong>SaaS Landing Page</strong> Analysis</h4>
+                <p>_________</p>
+                <p>
+                    A perfect structure created after we analized trends in SaaS
+                    landing page designs. Analysis made to the most popular SaaS
+                    bussinesses.
+                </p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <img src="Assets/icons/icons-64-violet/browser-64.png" alt="">
+                <h4><strong>Smart</strong> BEM <strong>Grid</strong></h4>
+                <p>_________</p>
+                <p>
+                    Blocks, Elements and Modifiers. A smart HTML/CSS structure that
+                    can easely be reused. Layout driven by the purpose of modularity.
+                </p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <img src="Assets/icons/icons-64-violet/desktop-windows-64.png" alt="">
+                <h4><strong>Multiple</strong> Unique <strong>Desings</strong></h4>
+                <p>_________</p>
+                <p>
+                    Choose between multiple unique designs and easy integrate elements from one
+                    desing to another. Following the latest design trends.
+                </p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <img src="Assets/icons/icons-64-violet/customizer-64.png" alt="">
+                <h4>Flexible <strong>HTML Sections</strong></h4>
+                <p>_________</p>
+                <p>
+                    Simple and Smart HTML code that works reintegrated in any part
+                    of the layout. Reuse the elements from one design to another.
+                </p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <img src="Assets/icons/icons-64-violet/users-64.png" alt="">
+                <h4><strong>User</strong> Friendly</h4>
+                <p>___________________________</p>
+                <p>
+                    Easy to navigate. Made with user experience in mind, in order to provide
+                    the perfect landing page experience for your client.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-12 text-center titles desc" id="easy-api">
+                <h3>Easy to use API</h3>
+                <p>_________</p>
+                <p>
+                    Guide to setup and configuration. You can present below and a description
+                    of how tour system configuration works and add some animated screens.
+                </p>
+            </div>
+
+            <div class="col-12">
+                <ul class="nav nav-tabs justify-content-end" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                            data-bs-target="#InitializingJS" type="button" role="tab" aria-controls="home"
+                            aria-selected="true">Initializing JS
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#ConfigurationCSS" type="button" role="tab" aria-controls="profile"
+                            aria-selected="false">Configuration CSS
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                            data-bs-target="#SecurityLevelsAPI" type="button" role="tab" aria-controls="contact"
+                            aria-selected="false">Security Levels API
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active mt-4" id="InitializingJS" role="tabpanel"
+                        aria-labelledby="home-tab">
+                        <code style="color: #1530bb;">
+                            <span style="color: #ae76d3;">$('.modal-toggle').on('click', function(e){</span><br>
+                                &emsp; e.preventDefault();<br>
+                                &emsp; var modalopen = $(this).data("openpopup");<br>
+                                &emsp; $('.modal--'+modalopen).toggleClass('modal--visible');<br>
+                                &emsp; var modaltype = $(this).data("popup");<br>
+                                &emsp; $('.modal__content--'+modaltype).toggleClass('modal__content--visible');<br>
+                                &emsp; &emsp; &emsp; $('.modal__switch').on('click', function(e) {<br>
+                                &emsp; &emsp; &emsp; &emsp; $('.modal__content').removeClass('modal__content--visible');<br>
+                                &emsp; &emsp; &emsp; &emsp; var modaltypeb = $(this).data("popup");<br>
+                                &emsp; &emsp; &emsp; &emsp; $('.modal__content--'+modaltypeb).toggleClass('modal__content--visible');<br>
+                                &emsp; &emsp; &emsp; });<br>
+                            });
+                        </code>
+                    </div>
+                    <div class="tab-pane fade mt-4" id="ConfigurationCSS" role="tabpanel" aria-labelledby="profile-tab">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti illo iste fugiat
+                        inventore, a aliquam et tempora, accusamus saepe voluptates, ea corporis architecto eos
+                        voluptas. Fuga esse minus ratione!
+                    </div>
+                    <div class="tab-pane fade mt-4" id="SecurityLevelsAPI" role="tabpanel"
+                        aria-labelledby="contact-tab">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt libero ullam totam, consequuntur
+                        inventore facere temporibus suscipit et molestiae voluptate autem, rem vel tempore accusamus
+                        reiciendis repellendus! Quos ut obcaecati eaque error doloremque fugiat. Possimus iusto iste
+                        ipsum aliquam earum aliquid corrupti dolores quis quia unde nobis, molestiae nemo! Culpa.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12" id="GetCode">
+                <div class="row align-items-center justify-content-end">
+                    <div class="col-6 col-lg-2 text-end">
+                        <a href="#" style="background-color: #65c8db;">GET THE CODE</a>
+                    </div>
+                    <div class="col-6 col-lg-2 text-end">
+                        <a href="#" style="background-color: #a869d1;">RUN EXAMPLE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5 titles desc" id="flex-pri">
+                <h3>Flexible Pricing</h3>
+                <p>_________</p>
+                <p>
+                    Guide to setup and configuration. You can present below and a description
+                    of how tour system configuration works and add some animated screens.
+                </p>
+            </div>
+
+            <div class="col-12 tab-planes">
+                <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Monthly"
+                            type="button" role="tab" aria-controls="home" aria-selected="true">Monthly</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Yearly"
+                            type="button" role="tab" aria-controls="profile" aria-selected="false">Yearly</button>
+                    </li>
+                </ul>
+                <div class="tab-content mt-4" id="myTabContent">
+                    <div class="tab-pane fade show active" id="Monthly" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-3 text-center plan">
+                                <h3>FREE</h3>
+                                <p>____</p>
+                                <p>$<span>0</span>/month</p>
+                                <ul>
+                                    <li>
+                                        <strong>1</strong> <span>User Account</span>
+                                    </li>
+                                    <li>
+                                        <strong>10</strong> <span>Team Accounts</span>
+                                    </li>
+                                    <li>
+                                        <strong>Unlimited</strong> <span>Emails Accounts</span>
+                                    </li>
+                                    <li>
+                                        <span>Set And Manage Permissions</span>
+                                    </li>
+                                    <li class="non-checked">
+                                        <span>API & extension support</span>
+                                    </li>
+                                    <li class="non-checked">
+                                        <span>Developer suppoort</span>
+                                    </li>
+                                    <li class="non-checked">
+                                        <span>A / B Testing</span>
+                                    </li>
+                                </ul>
+
+                                <a href="#">Sign up</a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3 text-center plan">
+                                <h3>STARTUP</h3>
+                                <p>____</p>
+                                <p>$<span>29</span>/month</p>
+                                <ul>
+                                    <li>
+                                        <strong>10</strong> <span>User Account</span>
+                                    </li>
+                                    <li>
+                                        <strong>100</strong> <span>Team Accounts</span>
+                                    </li>
+                                    <li>
+                                        <strong>Unlimited</strong> <span>Emails Accounts</span>
+                                    </li>
+                                    <li>
+                                        <span>Set And Manage Permissions</span>
+                                    </li>
+                                    <li>
+                                        <span>API & extension support</span>
+                                    </li>
+                                    <li class="non-checked">
+                                        <span>Developer suppoort</span>
+                                    </li>
+                                    <li class="non-checked">
+                                        <span>A / B Testing</span>
+                                    </li>
+                                </ul>
+                                <a href="#">Sign up</a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3 text-center plan popular ribbon">
+                                <h3>PRO</h3>
+                                <p>____</p>
+                                <p>$<span>49</span>/month</p>
+                                <ul>
+                                    <li>
+                                        <strong>50</strong> <span>User Account</span>
+                                    </li>
+                                    <li>
+                                        <strong>500</strong> <span>Team Accounts</span>
+                                    </li>
+                                    <li>
+                                        <strong>Unlimited</strong> <span>Emails Accounts</span>
+                                    </li>
+                                    <li>
+                                        <span>Set And Manage Permissions</span>
+                                    </li>
+                                    <li>
+                                        <span>API & extension support</span>
+                                    </li>
+                                    <li>
+                                        <span>Developer suppoort</span>
+                                    </li>
+                                    <li class="non-checked">
+                                        <span>A / B Testing</span>
+                                    </li>
+                                </ul>
+                                <a href="#">Sign up</a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3 text-center plan">
+                                <h3>ULTRA</h3>
+                                <p>____</p>
+                                <p>$<span>99</span>/month</p>
+                                <ul>
+                                    <li>
+                                        <strong>Unlimited</strong> <span>User Account</span>
+                                    </li>
+                                    <li>
+                                        <strong>Unlimited</strong> <span>Team Account</span>
+                                    </li>
+                                    <li>
+                                        <strong>Unlimited</strong> <span>Emails Account</span>
+                                    </li>
+                                    <li>
+                                        <span>Set And Manage Permissions</span>
+                                    </li>
+                                    <li>
+                                        <span>API & extension support</span>
+                                    </li>
+                                    <li>
+                                        <span>Developer suppoort</span>
+                                    </li>
+                                    <li>
+                                        <span>A / B Testing</span>
+                                    </li>
+                                </ul>
+                                <a href="#">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="Yearly" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-12 text-center div-TbWe position-relative titles desc">
+                <h3 class="mt-4">Trusted by world experts</h3>
+                <p>_________</p>
+
+                <img class="img-1" src="Assets/avatar-1.jpg" alt="">
+                <img class="img-2" src="Assets/avatar-2.jpg" alt="">
+                <img class="img-3" src="Assets/avatar-3.jpg" alt="">
+                <img class="img-4" src="Assets/avatar-4.jpg" alt="">
+                <img class="img-5" src="Assets/avatar-5.jpg" alt="">
+                <img class="img-6" src="Assets/avatar-6.jpg" alt="">
+                <img class="img-7" src="Assets/avatar-2.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-lg-5 freq-ask-q">
+                <h3>Frequently asked questions</h3>
+                <p class="lead">
+                    Have a presale question about our products and features?
+                    Or looking for a refund? We would love to hear what your
+                    concern is.
+                </p>
+
+                <ul>
+                    <li>Simple and Smart HTML code</li>
+                    <li>Works reintegrated in any part of the layout</li>
+                    <li>Reuse the elements from one design to another</li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-7">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Installing the app on all devices
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> It is shown by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How to implement and manage API key
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                until the collapse plugin adds the appropriate classes that we use to style each
+                                element. These classes control the overall appearance, as well as the showing and hiding
+                                via CSS transitions. You can modify any of this with custom CSS or overriding our
+                                default variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How to set up and optimize your account
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Manage your account access and security settings
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                API integration basic overview
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Deactivating or deleting your account
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row hSmPs">
+            <div class="col-12 col-lg-4">
+                <img class="mb-4" src="Assets/icons/icons-64-violet/support-64.png" alt="">
+                <div id="hAnds">
+                    <h3>Help & Support</h3>
+                    <p style="color: #65c8db;">____</p>
+                    <p class="lead">Our 24/7 support team is here to help you and make sure our product is up to date</p>
+                    <a href="#">support@supportemail.com</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <img class="mb-4" src="Assets/icons/icons-64-violet/globe-64.png" alt="">
+                <div id="mAndp">
+                    <h3>Media & Press</h3>
+                    <p style="color: #65c8db;">____</p>
+                    <p class="lead">Online awards and publications. Get our media resources and learn about our company</p>
+                    <a href="#">media@youremail.com</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <img class="mb-4" src="Assets/icons/icons-64-violet/wallet-64.png" alt="">
+                <div id="sales">
+                    <h3>Sales</h3>
+                    <p style="color: #65c8db;">____</p>
+                    <p class="lead">Have a presale question about our products and features? Or looking for a refund?</p>
+                    <a href="#">sales@salesemail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col text-center">
+                <a href="#">
+                    <img src="Assets/clients/clients-logo1.png" alt="">
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="#">
+                    <img src="Assets/clients/clients-logo2.png" alt="">
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="#">
+                    <img src="Assets/clients/clients-logo3.png" alt="">
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="#">
+                    <img src="Assets/clients/clients-logo4.png" alt="">
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="#">
+                    <img src="Assets/clients/clients-logo5.png" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-md-7">
+                <h3 class="display-3">Start <strong>growing</strong> your bussines</h3>
+                <p class="lead">
+                    Your issue is our main priority. Our 24/7 support team is here to
+                    help you and make sure our product is up to date. Have a presale 
+                    question about our products and features? Or looking for a refund?
+                    We would love to hear what you concern is. Online awards and publications.
+                </p>
+            </div>
+            <aside class="col-12 col-md-5">
+                <a href="#">GET STARTED NOW!</a>
+            </aside>
+        </div>
+    </section>
+
+    <footer class="container">
+        <div class="row">
+            <div class="col-12 col-md-5">
+                <h3>Lateral</h3>
+                <p class="lead">
+                    Copyright &#xf1f9; 2018 LATERAL <br>
+                    All Rights Reserved. Proudly made in EU.
+                </p>
+                <div class="row" style="margin-top: 100px;">
+                    <div class="col-2">
+                        <img src="Assets/social/black/twitter.png" alt="">
+                    </div>
+                    <div class="col-2">
+                        <img src="Assets/social/black/facebook.png" alt="">
+                    </div>
+                    <div class="col-2">
+                        <img src="Assets/social/black/linkedin.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Company</h3>
+                <ul>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Carrers</a>
+                    </li>
+                    <li>
+                        <a href="#">Awards</a>
+                    </li>
+                    <li>
+                        <a href="#">Users Program</a>
+                    </li>
+                    <li>
+                        <a href="#">Locations</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Products</h3>
+                <ul>
+                    <li>
+                        <a href="#">Integrations</a>
+                    </li>
+                    <li>
+                        <a href="#">API</a>
+                    </li>
+                    <li>
+                        <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="#">Release Notes</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Support</h3>
+                <ul>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">Press</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
